@@ -1,0 +1,1140 @@
+/*
+Theme Name: My Custom Theme
+Theme URI: http://example.com
+Author: Shujaat
+Author URI: http://example.com
+Description: A custom theme developed from scratch.
+Version: 1.0
+*/
+/* General Reset */
+/* Custom Fonts */
+@font-face {
+    font-family: 'Popins';
+    src: url('assets/fonts/Poppins-Light.ttf') format('ttf');
+    font-weight: '300';
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Popins';
+    src: url('assets/fonts/Poppins-ExtraLight.ttf') format('ttf');
+    font-weight: '200';
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Popins';
+    src: url('assets/fonts/Poppins-Medium.ttf') format('ttf');
+    font-weight: '500';
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Popins';
+    src: url('assets/fonts/Poppins-Regular.ttf') format('ttf');
+    font-weight: '400';
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Popins';
+    src: url('assets/fonts/Poppins-SemiBold.ttf') format('ttf');
+    font-weight: '600';
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Popins';
+    src: url('assets/fonts/Poppins-Bold.ttf') format('ttf');
+    font-weight: '700';
+    font-style: normal;
+}
+/* Global Font Settings */
+body {
+    font-family: 'Popins', sans-serif; /* Set default font to Roboto */
+    font-size: 16px; /* Default font size */
+    line-height: 1.5; /* Line height */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Popins', sans-serif;
+    font-weight: bold;
+}
+h1 {
+    font-size: 2.5rem; /* 40px */
+}
+
+h2 {
+    font-size: 2rem; /* 32px */
+}
+
+h3 {
+    font-size: 1.75rem; /* 28px */
+}
+
+h4 {
+    font-size: 1.2rem; /* 24px */
+}
+
+h5 {
+    font-size: 1.25rem; /* 20px */
+}
+
+h6 {
+    font-size: 1rem; /* 16px */
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem; /* 16px */
+}
+
+/* Links */
+a {
+    font-size: 1rem; /* 16px */
+    text-decoration: none;
+    color: #0073aa;
+}
+
+a:hover {
+    color: #005f8d;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Transparent Header */
+.site-header {
+    position: absolute; /* Position it on top of the banner */
+    top: 40;
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: transparent; /* Make the header background transparent */
+    z-index: 10; /* Ensure it stays on top */
+    transition: background-color 0.3s ease; /* Add transition for scroll effect */
+}
+.site-header.sticky {
+    position: fixed; /* Becomes fixed when scrolled */
+    background-color: #000000; /* Solid background after scrolling */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for emphasis */
+    border-bottom: 1px solid #eaeaea; /* Optional border */
+}
+/* Header Content Styling */
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Change Header Background on Scroll */
+.scrolled .site-header {
+    position: fixed; /* Stick the header to the top */
+    background-color: #fff; /* Set a solid color background after scrolling */
+    border-bottom: 1px solid #eaeaea;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for emphasis */
+}
+/* Center the Navigation Menu */
+.header-center {
+    text-align: center; /* Align the menu items centrally */
+}
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    height: 4px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 10px;
+}
+/* Close Button */
+.close-button {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    
+}
+/* Hide the menu on mobile */
+@media (max-width: 768px) {
+    .main-menu {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #000000; /* Optional: Background color for the dropdown */
+        position: absolute;
+        top: 60px; /* Adjust this value to fit your design */
+        left: 0;
+        padding: 10px 0;
+        text-align-last: left;
+    }
+    .header-right {
+        display: none;
+    }
+    .banner-section{
+        height: 450px !important;
+    }
+    .banner-content {
+        width: 100%;
+        z-index: 8 !important;
+    }
+    .site-header.sticky .hamburger-menu .bar{
+        background-color: white;
+    }
+    .banner-subtitle {
+        margin-bottom: 60px;
+        font-size: 52px;
+        margin-top: 20px;
+    }
+    p#info-subheading{
+        width: 80% !important;
+    }
+    .column {
+        flex: unset !important;
+        max-width: 100% !important;
+        text-align: center;
+        width: 100% !important;
+    }
+    .swiper-slide {
+        width: calc(100% - 10px); /* One slide per view */
+    }
+
+    .contact-container{
+        display:block !important;
+    }
+    .contact-us-section{
+        padding: 30px !important;
+    }
+    .contact-form {
+       
+        padding-left: 10px !important;
+    }
+    .footer-nav {
+        width: 100% !important;
+    }
+    .hamburger-menu {
+        display: flex; /* Show hamburger on mobile */
+    }
+    .footer-social {
+        justify-items: center;
+    }
+    .main-menu li {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-menu li a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    /* Show the menu when active */
+    .header-center.active .main-menu {
+        display: flex !important;
+    }
+    h1.banner-subtitle{
+        font-size: 28px;
+    }
+    .content-wrapper {
+        flex-direction: column; /* Stacks sidebar and main content vertically on smaller screens */
+    }
+    .site-sidebar,
+    .main-content {
+        width: 100%; /* Full width for both sidebar and main content */
+    }
+}
+/* Inline Menu Styling */
+.main-menu {
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the items */
+    gap: 20px; /* Space between menu items */
+}
+
+.main-menu li {
+    display: inline-block; /* Ensure items are inline */
+}
+
+.main-menu li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Default color */
+    font-size: 1em; /* Adjust size as needed */
+    padding: 10px 15px; /* Add some padding for click area */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.main-menu li a:hover {
+    color: #34A0A4; /* Change color on hover */
+}
+a.btn.btn-primary {
+    background: #34A0A4;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 32px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Sidebar styling */
+.site-sidebar {
+    width: 25%; /* Adjust the width as needed */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.widget {
+    margin-bottom: 20px;
+}
+.widget-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.content-area {
+    padding: 20px;
+}
+.post-list {
+    margin: 20px 0;
+}
+.post-title a {
+    font-size: 1.5em;
+    color: #333;
+    text-decoration: none;
+}
+.post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+.post-excerpt {
+    margin-bottom: 20px;
+}
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.pagination a {
+    text-decoration: none;
+    color: #0073aa;
+}
+.no-posts {
+    text-align: center;
+    margin-top: 50px;
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: row-reverse; /* Places sidebar on the left */
+    gap: 20px; /* Adds spacing between the sidebar and main content */
+}
+.main-content {
+    width: 75%; /* Adjust the width as needed */
+}
+
+
+/* 404 styling */
+.error-404 {
+    text-align: center;
+    padding: 50px 20px;
+}
+.error-404 .page-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+.page-content p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+
+
+/* Banner Section Styles */
+.banner-section {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Centers the image */
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Make image cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+}
+/* Background overlay styling */
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: 1; /* Ensure it's above the image but below the content */
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%; /* Position the content vertically in the center */
+    left: 50%; /* Position the content horizontally in the center */
+    transform: translate(-50%, -50%); /* Adjust to center it exactly */
+    text-align: center; /* Align text to the center */
+    color: white; /* White text for contrast on the image */
+    z-index: 10; /* Ensure the text is above the image */
+}
+
+.banner-title {
+    font-weight: 300;
+   
+    margin: 0; /* Remove any default margin */
+}
+
+.banner-subtitle {
+  font-size: 52px;;
+    margin-top: 10px; /* Space between title and subtitle */
+}
+
+
+a.banner-button {
+    /* margin-top: 40px !important; */
+    /* width: 40%; */
+    background: #34A0A4;
+    color: white;
+    padding: 12px 40px;
+    border-radius: 32px;
+    font-size: 18px;
+    text-decoration: none;
+}
+.banner-button:hover {
+    background-color: #000000;
+}
+
+/* Section Styling */
+.info-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Section Header */
+.section-header {
+    margin-bottom: 60px;
+}
+
+.main-heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subheading {
+    font-size: 1.2em;
+    color: #666;
+}
+.divider {
+    width: 80px; /* Adjust the width of the divider */
+    height: 1px; /* Thickness of the divider */
+    background-color: #34A0A4; /* Red color */
+    margin: 0 auto; /* Center the divider */
+    border-radius: 2px; /* Optional: rounded edges */
+    margin-top: 50px; /* Space between subheading and divider */
+}
+/* Row and Columns */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between columns */
+    justify-content: center;
+}
+
+.column {
+    flex: 1 1 calc(25% - 20px); /* Four columns with space adjustment */
+    max-width: 250px; /* Optional max width */
+    text-align: center;
+}
+
+/* Info Box */
+.info-box {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-items: left;
+}
+
+.info-box:hover {
+    background-color: #000; /* Change background to black */
+    color: #fff; /* Change text color to white */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Number Styling */
+.number {
+    font-size: 20px;
+    font-weight: 300;
+    color: #34A0A4;
+    margin-bottom: 10px;
+}
+
+.info-box:hover .info-title,
+.info-box:hover .info-description {
+    color: #fff; /* Change text color to white */
+}
+/* Info Title */
+.info-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Info Description */
+.info-description {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+    text-align: left;
+}
+p#info-subheading {
+    
+    width: 40%;
+    justify-self: center;
+}
+
+/* Project Section  */
+/* Basic styles for the Projects Carousel */
+.projects-carousel-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.projects-carousel-section .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+.project-card {
+    background-color: #f0f0f0; /* Light grey background color */
+    border-radius: 4%; /* Border radius of 4% */
+    padding: 20px; /* Padding inside the card */
+    display: flex;
+    flex-direction: column; /* Ensures content inside the card is arranged vertically */
+    justify-content: space-between; /* Ensures the content is spaced evenly */
+    height: 100%; /* Ensures all cards are of equal height */
+    box-sizing: border-box; /* Includes padding and borders in the element's total width and height */
+    overflow: hidden; /* Prevents content from overflowing the card */
+}
+.filter-button {
+    background: #34A0A4;
+    color: white;
+    padding: 6px 30px;
+    border-radius: 32px;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+}
+/* Ensure the project card inner content fills the card */
+.project-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Title styling */
+.project-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Excerpt styling */
+.project-excerpt {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555; /* Slightly dark gray for text */
+}
+
+/* Button styling */
+.btn-read-more {
+    background-color: #34A0A4; /* Blue background for the button */
+    color: white; /* White text color */
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 4%;
+    text-decoration: none;
+    display: inline-block;
+}
+span.start-date {
+    font-size: 14px;
+}
+.container.project-detail {
+    padding: 0px 78px;
+}
+span.end-date{
+ font-size: 14px;;
+}
+.project-dates {
+    margin-bottom: 17px;
+}
+.btn-read-more:hover {
+    background-color: #000000; /* Darker blue on hover */
+    color: white;
+}
+.project-image img {
+    border-radius: 4%;
+}
+
+/* Swiper Container - Centered and 3 cards per view on desktop */
+
+.swiper-container {
+    width: 100%; /* Full width of the container */
+    max-width: 1200px; /* Optional: Set a max-width if needed */
+    margin: 0 auto; /* Centers the swiper in its container */
+    padding: 0 20px; /* Optional: Prevents content from touching the edges */
+    box-sizing: border-box; /* Ensures padding and borders are included in total width */
+    position: relative; /* For navigation buttons positioning */
+    overflow: hidden; /* Prevents horizontal scroll */
+}
+
+/* Make sure swiper slides are correctly sized */
+.swiper-slide {
+    width: calc(33.333% - 20px); /* 3 cards per row */
+    margin-right: 20px; /* Adjust space between cards */
+    box-sizing: border-box;
+}
+
+/* Adjust for different screen sizes */
+@media (max-width: 1024px) {
+    .swiper-slide {
+        width: calc(50% - 15px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: calc(100% - 10px); /* 1 card per row */
+    }
+}
+
+/* Style for the navigation buttons inside the swiper container */
+/* Style for Swiper Navigation Buttons */
+.swiper-button-next, .swiper-button-prev {
+    background-color: black !important; /* Black background */
+    color: white !important; /* White arrow color */
+    border-radius: 50% !important; /* Make the button circular */
+    width: 40px !important; /* Set the size of the circular button */
+    height: 40px !important; /* Set the size of the circular button */
+    display: flex;
+    justify-content: center; /* Center the arrow horizontally */
+    align-items: center; /* Center the arrow vertically */
+    font-size: 12px !important; /* Make sure the arrow fits inside */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center the button vertically */
+    z-index: 10;
+}
+
+/* Position the next and previous buttons */
+.swiper-button-next {
+    right: 10px; /* Move to the right side */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Move to the left side */
+}
+
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px !important; /* Adjust the arrow size */
+    font-weight: bold;
+    text-transform: none; /* Ensure arrow is not transformed */
+}
+
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: #333 !important; /* Darker background on hover */
+}
+
+
+
+/* Contact Us Section Styling */
+/* Contact Us Section Styling */
+.contact-us-section {
+    position: relative;
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Background Image with Overlay */
+.contact-us-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('http://localhost/TestTask/wp-content/uploads/2024/12/cta.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; /* Ensures the background stays behind the content */
+}
+
+/* Background Overlay */
+.contact-us-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Ensures the overlay stays behind the content */
+}
+
+/* Contact Container with Two Columns */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1;
+    padding-top: 4%;
+}
+
+.contact-info-item {
+    margin-bottom: 20px;
+    font-size: 18px;
+    vertical-align: middle;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact-info-item i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.contact-info-link {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+.form-group label {
+    color: black;
+}
+
+.contact-info-link:hover {
+    color: #007bff;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form .submit-button, .contact-form .reset-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form .submit-button {
+    background-color: #34A0A4;
+    color: white;
+}
+
+.contact-form .submit-button:hover {
+    background-color: #34A0A4;
+}
+
+.contact-form .reset-button {
+    background-color: #000000;
+    color: white;
+}
+
+.contact-form .reset-button:hover {
+    background-color: #000000;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333; /* Dark background for footer */
+    color: #fff; /* White text color */
+    padding: 40px 20px;
+}
+
+/* Footer container with Flexbox layout */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px; /* Space between columns */
+}
+
+.footer-container > div {
+    flex: 1; /* Ensure all columns take equal width */
+    min-width: 250px; /* Prevent columns from getting too small on mobile */
+}
+
+.footer-logo img {
+    max-width: 150px; /* Adjust logo size */
+}
+
+.footer-description h3, .footer-nav h3, .footer-social h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-description p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.footer-nav .footer-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav .footer-menu li {
+    margin: 10px 0;
+}
+
+.footer-nav .footer-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-nav .footer-menu li a:hover {
+    color: #34A0A4; /* Hover effect for links */
+}
+.footer-menu ul {
+    list-style-type: none; /* Remove list item bullets */
+    padding-left: 0; /* Remove any default left padding */
+}
+
+.footer-menu li {
+    margin-bottom: 10px; /* Optional: Adds spacing between list items */
+}
+
+.footer-menu li a {
+    text-decoration: none; /* Optional: Removes underline from links */
+    color: inherit; /* Optional: Inherit color from parent, adjust as needed */
+}
+
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social ul li a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-social ul li a:hover {
+    color: #34A0A4; /* Hover effect for social icons */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.projects-grid-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensures responsiveness */
+    gap: 20px; /* Adjust spacing */
+    justify-content: center; /* Centers the posts if fewer than expected */
+    margin-top: 30px;
+}
+
+.projects-grid-section h1.section-title {
+    justify-self: center;
+}
+
+.projects-grid-section .project-card {
+    width: 100%; /* Ensures each card stays within the grid */
+    max-width: 400px; /* Prevents oversized cards */
+    margin: auto; /* Center-aligns single cards */
+    background: #fff; /* Keeps styling uniform */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.projects-grid-section .project-card:hover {
+    transform: translateY(-5px);
+}
+
+.projects-grid-section .project-image img {
+    width: 100%;
+    height: auto;
+}
+
+.projects-grid-section .project-info {
+    padding: 15px;
+}
+
+.projects-grid-section .project-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.projects-grid-section .project-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.projects-grid-section .project-title a:hover {
+    color: #0073aa;
+}
+
+.projects-grid-section .project-excerpt {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Style for the banner */
+/* Set the height for the banner section */
+.project-detail.project-banner {
+    height: 400px; /* Set the desired height */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Position relative for centering child elements */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    color: #fff; /* Ensure text is visible */
+}
+
+/* Overlay for dark background effect */
+/* Set the height for the banner section */
+.project-detail.project-banner {
+    height: 400px; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Position relative for centering child elements */
+    display: flex; /* Flexbox to center */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Overlay for dark background effect */
+.project-detail .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Overlay on top of the background image */
+}
+
+/* Title styling */
+.project-detail .project-title {
+    position: relative;
+    z-index: 2; /* Ensure title appears above the overlay */
+    font-size: 3rem; /* Adjust the size as needed */
+    font-weight: bold;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    color: #fff; /* White color for visibility */
+    padding-top: 10%;
+}
+
+
+
+/* Style for the content section */
+.project-detail.project-content {
+    padding: 50px 0;
+}
+
+.project-detail .section-heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.project-detail .project-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+form.project-filter-form label {
+    font-size: 18px;
+    font-weight: 600;
+}
+input#start_date {
+    padding: 5px;
+    border-radius: 6px;
+}
+input#end_date{
+    padding: 5px;
+    border-radius: 6px;
+    
+}
+button.date-button {
+    background: #34A0A4;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 32px;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: none !important;
+    border: none;
+}
+
+/* Blog Template css */
+.blogs-grid-section{
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+.blogs-grid-section h1.section-title {
+    justify-self: center;
+}
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.blogs-grid-section .blog-card {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.blog-card {
+    background-color: #f0f0f0;
+    border-radius: 4%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.blog-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.blogs-grid-section .blog-image img {
+    width: 100%;
+    height: auto;
+}
+.blog-image img {
+    border-radius: 4%;
+}
+.blogs-grid-section .blog-info {
+    padding: 15px;
+}
+.blogs-grid-section .blog-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+.blogs-grid-section .blog-title a {
+    color: inherit;
+    text-decoration: none;
+}
+.blogs-grid-section .blog-excerpt {
+    font-size: 14px;
+    color: #666;
+}
+.blogs-grid-section .blog-card:hover {
+    transform: translateY(-5px);
+}
+.blog-detail .blog-banner {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

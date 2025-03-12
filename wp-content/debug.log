@@ -1,0 +1,32 @@
+[01-Dec-2024 13:01:27 UTC] Automatic updates starting...
+[01-Dec-2024 13:01:30 UTC] Automatic updates complete.
+[01-Dec-2024 13:19:45 UTC] PHP Warning:  Attempt to read property "title" on null in C:\xampp\htdocs\TestTask\wp-includes\class-wp-customize-widgets.php on line 923
+[01-Dec-2024 13:29:39 UTC] PHP Warning:  Attempt to read property "title" on null in C:\xampp\htdocs\TestTask\wp-includes\class-wp-customize-widgets.php on line 923
+[01-Dec-2024 13:40:46 UTC] PHP Fatal error:  Cannot redeclare my_theme_enqueue_scripts() (previously declared in C:\xampp\htdocs\TestTask\wp-content\themes\my-custom-theme\functions.php:3) in C:\xampp\htdocs\TestTask\wp-content\themes\my-custom-theme\functions.php on line 25
+[01-Dec-2024 13:40:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\TestTask\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[01-Dec-2024 13:40:46 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\TestTask\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[01-Dec-2024 13:42:54 UTC] PHP Fatal error:  Cannot redeclare my_theme_enqueue_scripts() (previously declared in C:\xampp\htdocs\TestTask\wp-content\themes\my-custom-theme\functions.php:3) in C:\xampp\htdocs\TestTask\wp-content\themes\my-custom-theme\functions.php on line 34
+[01-Dec-2024 23:30:33 UTC] PHP Deprecated:  Function wp_update_https_detection_errors is <strong>deprecated</strong> since version 6.4.0 with no alternative available. in C:\xampp\htdocs\TestTask\wp-includes\functions.php on line 6114
+[02-Dec-2024 00:32:26 UTC] Automatic updates starting...
+[02-Dec-2024 00:32:28 UTC] Automatic updates complete.
+[02-Dec-2024 02:22:41 UTC] PHP Warning:  Undefined variable $starting_date in C:\xampp\htdocs\TestTask\wp-content\themes\my-custom-theme\page.projects.php on line 70
+[02-Dec-2024 02:22:41 UTC] PHP Warning:  Undefined variable $starting_date in C:\xampp\htdocs\TestTask\wp-content\themes\my-custom-theme\page.projects.php on line 70
+[02-Dec-2024 02:22:41 UTC] PHP Warning:  Undefined variable $starting_date in C:\xampp\htdocs\TestTask\wp-content\themes\my-custom-theme\page.projects.php on line 70
+[02-Dec-2024 02:22:41 UTC] PHP Warning:  Undefined variable $starting_date in C:\xampp\htdocs\TestTask\wp-content\themes\my-custom-theme\page.projects.php on line 70
+[02-Dec-2024 02:24:58 UTC] PHP Warning:  Undefined variable $starting_date in C:\xampp\htdocs\TestTask\wp-content\themes\my-custom-theme\page.projects.php on line 71
+[02-Dec-2024 02:24:58 UTC] PHP Warning:  Undefined variable $starting_date in C:\xampp\htdocs\TestTask\wp-content\themes\my-custom-theme\page.projects.php on line 71
+[02-Dec-2024 02:24:58 UTC] PHP Warning:  Undefined variable $starting_date in C:\xampp\htdocs\TestTask\wp-content\themes\my-custom-theme\page.projects.php on line 71
+[02-Dec-2024 02:24:58 UTC] PHP Warning:  Undefined variable $starting_date in C:\xampp\htdocs\TestTask\wp-content\themes\my-custom-theme\page.projects.php on line 71
+[06-Feb-2025 07:53:53 UTC] Automatic updates starting...
+[06-Feb-2025 07:53:54 UTC]   Automatic plugin updates starting...
+[06-Feb-2025 07:53:54 UTC]   Automatic plugin updates complete.
+[06-Feb-2025 07:53:55 UTC] Automatic updates complete.
+[11-Mar-2025 15:53:27 UTC] Automatic updates starting...
+[11-Mar-2025 15:53:29 UTC]   Automatic plugin updates starting...
+[11-Mar-2025 15:53:29 UTC]   Automatic plugin updates complete.
+[11-Mar-2025 15:53:30 UTC]   Automatic theme updates starting...
+[11-Mar-2025 15:53:30 UTC]   Automatic theme updates complete.
+[11-Mar-2025 15:53:30 UTC] Automatic updates complete.
+[12-Mar-2025 14:43:49 UTC] PHP Warning:  wp_version_check(): An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in C:\xampp\htdocs\TestTask\wp-includes\functions.php on line 6114
+[12-Mar-2025 14:43:49 UTC] PHP Warning:  wp_update_plugins(): An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in C:\xampp\htdocs\TestTask\wp-includes\functions.php on line 6114
+[12-Mar-2025 14:43:49 UTC] PHP Warning:  wp_update_themes(): An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in C:\xampp\htdocs\TestTask\wp-includes\functions.php on line 6114
